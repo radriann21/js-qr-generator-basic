@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+    <title>QR Generator</title>
   </head>
   <body>
-    <div id="app"></div>
+
+    <main class="container">
+      <form id="form">
+        <h1>Insert text or direction:</h1>
+        <textarea name="text" id="text" cols="60" rows="8" maxlength="500"></textarea>
+        <small>
+          <span id="limit">0</span>/500
+        </small>
+        <button type="submit" id="generate">Generate QR</button>
+      </form>
+
+      <div id="qr" class="qrcode"></div>
+    </main>
+
+    <script src="libs/qrcode.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
